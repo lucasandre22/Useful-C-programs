@@ -56,7 +56,7 @@ int main()
 	for (int i = 0; i < SIZE; i++) {
 		vetor[i] = rand() % 1000000;
 	}
-	qsort(vetor, 80, sizeof(int), compare);
+	qsort(vetor, TAM, sizeof(int), compare);
 	start = (float)clock();
 	for(int i = SIZE; i > 0; i--)
 		binarySearch(vetor, SIZE, i);
