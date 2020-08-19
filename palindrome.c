@@ -22,7 +22,7 @@ char *unlimited_scanf(char *string)
 
 int main()
 {
-    int size, size_without_space = 0, palindroma = 1;
+    int size, size_without_space = 0, palindrome = 1;
     char* string;
     printf("Palindrome check\nPlease write your phrase : ");
     string = unlimited_scanf(string);
@@ -37,11 +37,11 @@ int main()
     for(int i = 0; i < size-1; i++) {
         if(string[i] != string[(size-1)-i]) {
             printf("It's not a palindrome!");
-            palindroma = 0;
+            palindrome = 0;
             break;
         }
     }
-    if(palindroma)
+    if(palindrome)
         printf("It's a palindrome!");
     free(string);
     return 0;
