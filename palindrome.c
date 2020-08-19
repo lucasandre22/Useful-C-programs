@@ -5,11 +5,12 @@
 char *unlimited_scanf(char *string)
 {
     char letter;
+    int i;
     string=(char *)malloc(sizeof(char));
     if(!string)
         return NULL;
     scanf("%c", &letter);
-    for(int i = 0;letter != '\n';i++)
+    for(i = 0;letter != '\n';i++)
     {
         string=(char *)realloc(string,(i+2)*sizeof(char));
         string[i]=letter;
