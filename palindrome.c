@@ -5,12 +5,11 @@
 char *unlimited_scanf(char *string)
 {
     char letter;
-    int i;
     string=(char *)malloc(sizeof(char));
     if(!string)
         return NULL;
     scanf("%c", &letter);
-    for(i=0;letter!='\n';i++)
+    for(int i = 0;letter != '\n';i++)
     {
         string=(char *)realloc(string,(i+2)*sizeof(char));
         string[i]=letter;
@@ -22,14 +21,14 @@ char *unlimited_scanf(char *string)
 
 int main()
 {
-    int size, size_without_space = 0, palindrome = 1;
+    int size, spaces_deleted = 0, palindrome = 1;
     char* string;
-    printf("Palindrome check\nPlease write your phrase : ");
+    printf("Palindrome check\nPlease write your phrase : \n");
     string = unlimited_scanf(string);
     size = strlen(string);
     for(int i = 0; i < size; i++) {
         if(string[i] == ' ') {
-            for(int j = i; j < size-size_without_space; j++)
+            for(int j = i; j < size-spaces_deleted; j++)
                 string[j] = string[j+1];
             size--;
         }
