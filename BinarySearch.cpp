@@ -30,7 +30,7 @@ int sequencialSearch(int vetor[], int size, int key)
 	{
 		if (vetor[i] == key)
 			return 1;
-		if (vetor[i] > key)
+		else if (vetor[i] > key)
 			return 0;
 	}
 }
