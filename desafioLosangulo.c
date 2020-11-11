@@ -18,9 +18,7 @@ void escreve_hashtag(int espaco)
 
 int main()
 {
-    int esq, dir;
-    int n, aux = 0;
-    int espaco = 0;
+    int n, aux = 0, espaco = 0;
     scanf("%d", &n);
     aux = n;
     for(int i = 0; i < n; i++)
